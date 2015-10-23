@@ -44,7 +44,7 @@ public class StudentController {
 		return studentManager.addStudent(student);
 	}
 
-	@RequestMapping(value = "/student/{studentId}", method = RequestMethod.PUT,produces={ "application/xml", "application/json"})
+	@RequestMapping(value = "/student/{studentId}", method = RequestMethod.PUT,produces={ "application/xml", "application/json"},consumes={ "application/xml", "application/json"})
 
 	@ResponseBody
 	public Student updateStudentwithId(@RequestBody Student student, @PathVariable long studentId) {
@@ -85,7 +85,7 @@ public class StudentController {
 		}
 	}
 
-	@RequestMapping(value = "/student/status/{studentId}", method = RequestMethod.GET,produces={ "application/xml"})
+	@RequestMapping(value = "/student/status/{studentId}", method = RequestMethod.GET,produces={ "application/xml", "application/json"})
 	@ResponseBody
 	public StudentStatus findStatusById(@PathVariable long studentId) {
 		return studentManager.getStudentStatusbyId(studentId);
