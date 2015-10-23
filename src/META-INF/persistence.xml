@@ -4,6 +4,7 @@
 		<provider>
         org.datanucleus.api.jpa.PersistenceProviderImpl
       </provider>
+		<class>org.app.model.Student</class>
 		<properties>
 			<property name="datanucleus.NontransactionalRead" value="true" />
 			<property name="datanucleus.NontransactionalWrite" value="true" />
