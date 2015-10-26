@@ -48,11 +48,11 @@ public class StudentService implements StudentMgr{
 		}.getClass().getEnclosingMethod().getName();
 		System.out.println(className + "." + methodName + "() ");
 		List<Student> lStudent = studentDao.listStudents();
-		
+		System.out.println(className + "." + methodName + "() "+"list of student size is"+lStudent.size());
 		return lStudent;
 	}
 
-	/**
+	/** 
 	 * without exception public Student getStudentbyId(long id) {
 	 * 
 	 * return students.get(id); }
